@@ -1,6 +1,6 @@
 flask
 gunicorn
 pickle-mixin
-sklearn
+scikit-learn
 numpy
 pandas
