@@ -1,0 +1,57 @@
+<!doctype html>
+<style>
+form {
+    margin: auto;
+    width: 35%;
+
+}
+
+.result {
+
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+</style>
+
+<head>
+    <title>  Прогнозирование глубины и толщины шва  </title>
+</head>
+
+<form action="{{url_for('main')}}" method = "POST">
+    <fieldset>
+        <legend>Введите значение IW </legend>
+        <input name="IW" type="number"
+        required>
+        <br>
+        <br>
+        <legend>Введите значение IF </legend>
+        <input name="IF" type="number"
+        required>
+        <br>
+        <br>
+        <legend>Введите значение VW </legend>
+        <input name="VW" type="number"
+        required>
+        <br>
+        <br>
+        <legend>Введите значение FP </legend>
+        <input name="FP" type="number"
+        required>
+        <br>
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+
+<div class="result" align="center">
+    {% if result%}
+        <br>
+        <p style="font-size: 30px">
+        Прогнозная глубина и ширина шва
+        </p>
+        <p style="font-size: 30px"> {{result}}</p>
+    {% endif %}
+    </div>
+
+</div>
