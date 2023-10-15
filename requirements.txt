@@ -1,4 +1,6 @@
 flask
 gunicorn
-pickle
+pickle-mixin
 sklearn
+numpy
+pandas
